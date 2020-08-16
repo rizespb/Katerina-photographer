@@ -1,8 +1,18 @@
+// Montserrat (100, 300, 400, 500, 700) вместо Proxima
+
+// Navigation Montserrat 700 (there are also 500, 400) 1.8rem
+
+
+// DELETE NON-USE FONTS from INDEX.HTML
+
 :root {
-    --font-primary: 'Roboto', sans-serif;
+    --font-primary: 'Montserrat', sans-serif;
     --font-secondary: 'Lato', sans-serif;
-    --font-display: 'Montserrat', sans-serif;
-    --font-display-2: 'Roboto Slab', sans-serif;
+    --font-display: 'Playfair Display', serif;
+    --font-display-2: 'Denistina', serif;
+
+    --color-white: #fff;
+    --color-black: #000;
 
     
 

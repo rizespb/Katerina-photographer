@@ -1,0 +1,30 @@
+.navigation{
+    position: sticky;
+    top: 0;
+    max-width: 87%;
+
+    margin-bottom: 10rem;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        
+
+        &--item {
+
+            &:not(:last-child) {
+                margin-right: 5rem;
+            }
+        }
+
+        &--link,
+        &--link:link,
+        &--link:visited {
+            font-size: 1.7rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: .5px;
+        }
+    }
+}

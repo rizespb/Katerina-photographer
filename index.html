@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@700&family=Roboto+Slab:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700&family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="resources/favicon/favicon.png">
@@ -14,9 +14,79 @@
     </head>
 
     <body>
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__list--item">
+                    <a href="#" class="navigation__list--link">Главная</a>
+                </li>
+                <li class="navigation__list--item">
+                    <a href="#" class="navigation__list--link">Обо мне</a>
+                </li>
+                <li class="navigation__list--item">
+                    <a href="#" class="navigation__list--link">Портфолио</a>
+                </li>
+                <li class="navigation__list--item">
+                    <a href="#" class="navigation__list--link">Цены</a>
+                </li>
+                <li class="navigation__list--item">
+                    <a href="#" class="navigation__list--link">Услуги</a>
+                </li>
+                <li class="navigation__list--item">
+                    <a href="#" class="navigation__list--link">Отзывы</a>
+                </li>
+                <li class="navigation__list--item">
+                    <a href="#" class="navigation__list--link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
 
-    Hello, people!
-        
+        <header class="section-header">
+
+            <div class="header-slider"></div>
+
+            <div class="section-header__front">
+                <p class="section-header__front--heading-regular">Фотограф</p>
+                <h2 class="heading-2">Катерина Петрова</h2>
+                <p class="section-header__front--heading-italics">Красивая подпись, надо придумать</p>
+            </div>
+
+        </header>
+
+
+
+        <section class="section-about">
+
+            <div class="booking">
+                <p class="booking__heading">Забронировать дату</p>
+                <p class="booking__description">Короткое описание</p>
+
+                <form action="#" class="booking__form">
+                    <input type="text" class="booking__form--input" id="booking__name" placeholder="Ваше имя">
+                    <input type="text" class="booking__form--input" id="booking__tel" placeholder="Ваш телефон">
+                    <input type="text" class="booking__form--input" id="booking__date" placeholder="Желаемая дата">
+
+                    <button class="btn booking-form__btn">Отправить</button>
+
+                    <p class="booking-form__consent">Нажимая кнопку «Отправить», Вы даете свое согласие на обработку персональных данных в соответствии с <a href="#" class="booking-form__consent--link">политикой конфиденциальности</a>.</p>
+                </form>
+            </div>
+
+            <h1 class="heading-1">Обо мне</h1>
+            
+            <div class="section-about__content">
+                <img src="img/image-about-me.jpg" alt="Beautiful photo" class="section-about__content--img">
+                <div class="section-about__content--text-box">
+                    <div class="section-about__content--text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores possimus ex quod. Ducimus tempora laborum tenetur consectetur itaque exercitationem, ipsum sequi odit quidem tempore repudiandae doloremque ea quia asperiores consequuntur.
+                    </div>
+                    <div class="section-about__content--name">Фотограф Катерина Петрова</div>
+                    <button class="btn section-about__content--btn">Консультация</button>
+                    <div class="section-about__content--wish">Какое-то пожелание!</div>
+                </div>
+            </div>
+
+        </section>
+
     </body>
 
 </html>
