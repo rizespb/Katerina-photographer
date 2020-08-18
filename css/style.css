@@ -5,8 +5,12 @@
   --font-display-2: 'Denistina', serif;
   --color-white: #fff;
   --color-black: #000;
+  --color-font-grey: #222;
+  --color-beige: #ceb285;
+  --color-grey-light: #f0f0f0;
   --shadow-dark: 0 1px 10px -6px rgba(0,0,0,.42), 0 1px 10px 0px rgba(0,0,0,.12), 0 4px 20px 3px rgba(0,0,0,.1);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0,.06);
+  --shadow-input-inset: inset 0 0 10px rgba(0,0,0,0.1);
   --line: 1px solid var(--color-grey-light-2); }
 
 *,
@@ -28,7 +32,7 @@ html {
 
 body {
   font-family: var(--font-primary);
-  color: var(--color-white);
+  color: var(--color-font-grey);
   font-weight: 300;
   font-size: 1.4rem; }
 
@@ -44,35 +48,99 @@ a {
 section {
   width: 100%; }
 
+.booking {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-dark);
+  border-radius: 3px;
+  padding: 3rem 5rem;
+  background-color: var(--color-white);
+  position: relative;
+  transform: translateY(-50%);
+  z-index: 1200; }
+  .booking__heading {
+    font-size: 2.2rem;
+    font-weight: 500;
+    padding-bottom: 1rem; }
+  .booking__description {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem; }
+  .booking__form {
+    width: 100%;
+    margin-bottom: 2rem; }
+    .booking__form--input {
+      height: 5rem;
+      width: 21%;
+      font-size: 1.8rem;
+      padding: 1rem 2rem;
+      border-radius: 3px;
+      border: none;
+      outline: none;
+      box-shadow: var(--shadow-input-inset);
+      background-color: var(--color-grey-light); }
+      .booking__form--input:not(:last-child) {
+        margin-right: 4%; }
+    .booking__form--btn {
+      background-color: var(--color-beige);
+      color: var(--color-white);
+      height: 5rem;
+      float: right;
+      margin-right: 2rem; }
+  .booking__consent {
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: right; }
+    .booking__consent--link, .booking__consent--link:link, .booking__consent--link:visited {
+      text-decoration: none;
+      color: var(--color-beige); }
+
+.btn {
+  width: 17rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  padding: 1rem; }
+  .btn .btn:active {
+    transform: translateY(5px); }
+
 .header-slider {
   background-image: url(../img/header-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
   width: 100%;
-  height: 100vh;
-  z-index: 100; }
+  height: 120vh;
+  z-index: 100;
+  min-height: 60rem; }
 
 .navigation {
-  position: sticky;
+  position: fixed;
   top: 0;
-  max-width: 87%;
-  margin-bottom: 10rem; }
+  width: 100%;
+  margin-bottom: 10rem;
+  padding: 3rem 20rem;
+  background-color: rgba(0, 0, 0, 0.7); }
   .navigation__list {
     list-style: none;
     display: flex;
-    justify-content: space-between; }
+    justify-content: center; }
     .navigation__list--item:not(:last-child) {
       margin-right: 5rem; }
     .navigation__list--link, .navigation__list--link:link, .navigation__list--link:visited {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       font-weight: 700;
       text-decoration: none;
-      letter-spacing: .5px; }
+      letter-spacing: .5px;
+      color: var(--color-white); }
 
 .section-header {
   width: 100%;
-  position: relative; }
+  position: relative;
+  color: var(--color-white); }
   .section-header__front {
     position: absolute;
     width: 100%;
@@ -80,8 +148,7 @@ section {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    padding-top: 7rem;
+    padding-top: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center; }
@@ -92,6 +159,11 @@ section {
       font-family: var(--font-display-2);
       font-size: 5rem;
       margin-top: 5rem; }
+
+.section-about {
+  position: relative;
+  z-index: 1100;
+  padding: 0 7rem; }
 
 @font-face {
   font-family: Denistina;

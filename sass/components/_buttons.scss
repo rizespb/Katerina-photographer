@@ -1,0 +1,13 @@
+.btn {
+    width: 17rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 1rem;
+
+    .btn:active {
+        transform: translateY(5px);
+    }
+}

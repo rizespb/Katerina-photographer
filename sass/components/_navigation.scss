@@ -1,14 +1,17 @@
 .navigation{
-    position: sticky;
+    position: fixed;
     top: 0;
-    max-width: 87%;
-
+    width: 100%;
     margin-bottom: 10rem;
+    padding: 3rem 20rem;
 
+
+    background-color: rgba(0,0,0,.7);
+   
     &__list {
         list-style: none;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         
 
         &--item {
@@ -21,10 +24,11 @@
         &--link,
         &--link:link,
         &--link:visited {
-            font-size: 1.7rem;
+            font-size: 1.5rem;
             font-weight: 700;
             text-decoration: none;
             letter-spacing: .5px;
+            color: var(--color-white);
         }
     }
 }

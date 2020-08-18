@@ -13,11 +13,15 @@
 
     --color-white: #fff;
     --color-black: #000;
+    --color-font-grey: #222;
+    --color-beige: #ceb285;
+    --color-grey-light: #f0f0f0;
 
     
 
     --shadow-dark: 0 1px 10px -6px rgba(0,0,0,.42), 0 1px 10px 0px rgba(0,0,0,.12), 0 4px 20px 3px rgba(0,0,0,.1);
     --shadow-light: 0 2rem 5rem rgba(0, 0, 0,.06);
+    --shadow-input-inset: inset 0 0 10px rgba(0,0,0,0.1);
 
     --line: 1px solid var(--color-grey-light-2);
 
