@@ -1,0 +1,15 @@
+.gallery {
+    column-count: 3;
+    column-gap: 2rem;
+
+    &__image {
+        display: inline-block;
+
+        width: 100%;
+        height: auto;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+}

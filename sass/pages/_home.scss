@@ -33,5 +33,66 @@
 .section-about {
     position: relative;
     z-index: 1100;
-    padding: 0 7rem;
+    padding: 0 10rem 2rem 10rem;
+    background-color: var(--color-section-about-back);
+
+    &__heading-1 {
+        margin-top: -7rem;
+    }
+
+    &__content {
+        margin-top: -8rem;
+        display: flex;
+        
+
+        &--img {
+            display: block;
+            width: 45%;
+            height: 45%;
+            border-radius: 100%;
+        }
+
+        &--text-box {
+            width: 50%;
+            padding: 0 5rem;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            //font-size: 1.6rem;
+        }
+
+        &--text {
+            text-align: justify;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+        }
+
+        &--name {
+            margin-bottom: 3rem;
+            font-weight: 700;
+            font-size: 1.6rem;
+        }
+
+        &--btn {
+            background-color: var();
+        }
+
+        &--wish {
+            margin-top: 3rem;
+            font-family: var(--font-display-2);
+            color: var(--color-beige);
+            font-size: 5rem;
+            align-self: flex-end;
+            transform: rotate(-15deg);
+        }
+    }
+}
+
+.section-portfolio {
+    padding: 3rem;
+}
+
+.section-gallery {
+    padding: 3rem;
 }

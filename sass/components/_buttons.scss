@@ -6,8 +6,11 @@
     outline: none;
     border-radius: 25px;
     padding: 1rem;
+    transition: all .2s;
+    box-shadow: var(--shadow-btn);
 
-    .btn:active {
-        transform: translateY(5px);
+    &:active {
+        transform: translateY(3px);
+        box-shadow: var(--shadow-btn-active);
     }
 }

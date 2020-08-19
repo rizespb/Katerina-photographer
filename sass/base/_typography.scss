@@ -5,7 +5,11 @@ a {
 }
 
 .heading-1 {
-
+    color: var(--color-grey-light);
+    font-size: 20rem;
+    text-align: center;
+    font-family: var(--font-display);
+    line-height: .7 !important;
 }
 
 .heading-2 {
