@@ -179,7 +179,7 @@ section {
 .portfolio {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   grid-gap: 3rem; }
   .portfolio__image-box {
     position: relative; }
@@ -244,6 +244,7 @@ section {
       display: block;
       width: 45%;
       height: 45%;
+      max-width: 50rem;
       border-radius: 100%; }
     .section-about__content--text-box {
       width: 50%;
