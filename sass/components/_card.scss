@@ -1,0 +1,49 @@
+.card {
+    padding: 3rem;
+    background-color: var(--color-white);
+    display: flex;
+    width: 23%;
+    flex-direction: column;
+    align-items: center;
+
+    &__title,
+    &__price {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--color-beige);
+    }
+
+    &__title {
+        margin-bottom: .5rem;
+    }
+
+    &__price {
+        margin-bottom: auto;
+    }
+
+    &__description {
+        margin: 1.5rem 0 5rem 0;
+        
+
+        &--feature {
+            display: flex;
+            align-items: center;
+
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        &--icon {
+            font-size: 1rem;
+            margin-right: 1rem;
+        }
+    }
+
+    &__btn {
+        background-color: var(--color-beige);
+        color: var(--color-white);
+    }
+}
