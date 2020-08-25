@@ -96,7 +96,7 @@
 }
 
 .section-price {
-    padding: 3rem 10rem;
+    padding: 3rem 10rem 15rem 10rem;
     background-color: var(--color-grey-background);
 
     &__cards {
@@ -108,4 +108,18 @@
 
 .section-gallery {
     padding: 3rem;
+}
+
+.section-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10rem 15rem 10rem;
+    min-height: 100vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(0,0,0, 0.5),
+        rgba(0,0,0, 0.5)), url(../img/background-contacts.jpg);
+    background-size: cover;
+    background-position: center;
 }
