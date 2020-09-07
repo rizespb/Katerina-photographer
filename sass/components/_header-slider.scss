@@ -3,7 +3,7 @@
     height: 120vh;
     z-index: 100;
 
-    min-height: 60rem;
+    //min-height: 60rem;
     background-color: var(--color-black);
     position: relative;
 
@@ -45,11 +45,11 @@
         opacity: 1;
     }
 
-    40% {
+    20% {
         opacity: 1;
     }
 
-    45% {
+    25% {
         opacity: 0;
     }
 
