@@ -9,12 +9,39 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="resources/favicon/favicon.png">
+
+        <script src="js/modernizr.js"></script> <!-- Modernizr -->
         
         <title>Фотограф Катерина Петрова</title>
     </head>
 
     <body>
         
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__list--item">
+                    <a href="/" class="navigation__list--link">Главная</a>
+                </li>
+                <li class="navigation__list--item">
+                    <a href="#id-section-about" class="navigation__list--link">Обо мне</a>
+                </li>
+                <li class="navigation__list--item">
+                    <a href="#id-section-portfolio" class="navigation__list--link">Портфолио</a>
+                </li>
+                <li class="navigation__list--item">
+                    <a href="#id-section-price" class="navigation__list--link">Стоимость</a>
+                </li>
+                <li class="navigation__list--item">
+                    <a href="#id-booking-footer" class="navigation__list--link">Забронировать</a>
+                </li>
+                <li class="navigation__list--item">
+                    <a href="#id-section-testimonials" class="navigation__list--link">Отзывы</a>
+                </li>
+                <li class="navigation__list--item">
+                    <a href="#id-contacts-block" class="navigation__list--link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
 
         <header class="section-header">
 
@@ -26,31 +53,7 @@
             </div>
 
             <div class="section-header__front">
-                <nav class="navigation">
-                    <ul class="navigation__list">
-                        <li class="navigation__list--item">
-                            <a href="#" class="navigation__list--link">Главная</a>
-                        </li>
-                        <li class="navigation__list--item">
-                            <a href="#" class="navigation__list--link">Обо мне</a>
-                        </li>
-                        <li class="navigation__list--item">
-                            <a href="#" class="navigation__list--link">Портфолио</a>
-                        </li>
-                        <li class="navigation__list--item">
-                            <a href="#" class="navigation__list--link">Цены</a>
-                        </li>
-                        <li class="navigation__list--item">
-                            <a href="#" class="navigation__list--link">Услуги</a>
-                        </li>
-                        <li class="navigation__list--item">
-                            <a href="#" class="navigation__list--link">Отзывы</a>
-                        </li>
-                        <li class="navigation__list--item">
-                            <a href="#" class="navigation__list--link">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
+                
 
                 <p class="section-header__front--heading-regular">Фотограф</p>
                 <h2 class="heading-2">Катерина Петрова</h2>
@@ -61,18 +64,18 @@
 
 
 
-        <section class="section-about">
+        <section class="section-about" id="id-section-about">
 
             <div class="booking">
                 <p class="booking__heading">Забронировать дату</p>
                 <p class="booking__description">Короткое описание</p>
 
-                <form action="#" class="booking__form">
-                    <input type="text" class="booking__form--input" id="booking__name" placeholder="Ваше имя">
-                    <input type="text" class="booking__form--input" id="booking__tel" placeholder="Ваш телефон">
-                    <input type="text" class="booking__form--input" id="booking__date" placeholder="Желаемая дата">
+                <form action="php/sendmail.php" method="POST" class="booking__form" id="id-booking__form">
+                    <input type="text" class="booking__form--input" id="id-booking__name" placeholder="Ваше имя">
+                    <input type="text" class="booking__form--input" id="id-booking__tel" placeholder="Ваш телефон">
+                    <input type="text" class="booking__form--input" id="id-booking__date" placeholder="Желаемая дата">
 
-                    <button class="btn booking__form--btn">Отправить</button>
+                    <button class="btn booking__form--btn" type="submit" form="id-booking__form">Отправить</button>
                 </form>
 
                 <p class="booking__consent">Нажимая кнопку «Отправить», Вы даете свое согласие на обработку персональных данных в соответствии с <a href="#" class="booking__consent--link">политикой конфиденциальности</a>.</p>
@@ -97,7 +100,7 @@
         </section>
 
 
-        <section class="section-portfolio">
+        <section class="section-portfolio" id="id-section-portfolio">
 
             <div class="portfolio">
 
@@ -150,7 +153,7 @@
 
 
         
-        <section class="section-price">
+        <section class="section-price" id="id-section-price">
             
             <h1 class="section-price__heading-1 heading-1">Стоимость</h1>
 
@@ -228,7 +231,7 @@
 
         <footer class="section-footer">
 
-            <div class="booking">
+            <div class="booking" id="id-booking-footer">
                 <p class="booking__heading">Забронировать дату</p>
                 <p class="booking__description">Короткое описание</p>
 
@@ -243,7 +246,7 @@
                 <p class="booking__consent">Нажимая кнопку «Отправить», Вы даете свое согласие на обработку персональных данных в соответствии с <a href="#" class="booking__consent--link">политикой конфиденциальности</a>.</p>
             </div>
 
-            <address class="contacts-block">
+            <address class="contacts-block" id="id-contacts-block">
 
                 <div class="contacts-block__text">
                     <p>Чувствуете покалывание на кончиках пальцев?</p>
@@ -286,6 +289,69 @@
             </div>
 
         </section>
+
+        <section class="section-testimonials" id="id-section-testimonials">
+           <div class="testimonials">
+
+               <div class="testimonials__testimonial">
+                   <img src="/img/testimonials/user-photos/avatar-1.jpg" alt="User photo" class="testimonials__testimonial--user-photo">
+                   <div class="testimonials__testimonial--content">
+                       <p class="testimonials__testimonial--header">Love Story</p>
+                        <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic, doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
+                        <p class="testimonials__testimonial--name">Светлана К.</p>
+                   </div>
+               </div>
+
+               <div class="testimonials__testimonial">
+                <img src="/img/testimonials/user-photos/avatar-2.jpg" alt="User photo" class="testimonials__testimonial--user-photo">
+                <div class="testimonials__testimonial--content">
+                    <p class="testimonials__testimonial--header">Индивидуальная фотосъемка</p>
+                     <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic, doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
+                     <p class="testimonials__testimonial--name">Ирина В.</p>
+                </div>
+            </div>
+
+            <div class="testimonials__testimonial">
+                <img src="/img/testimonials/user-photos/avatar-3.jpg" alt="User photo" class="testimonials__testimonial--user-photo">
+                <div class="testimonials__testimonial--content">
+                    <p class="testimonials__testimonial--header">Индивидуальная фотосъемка</p>
+                     <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic, doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
+                     <p class="testimonials__testimonial--name">Игорь Р.</p>
+                </div>
+            </div>
+
+            <div class="testimonials__testimonial">
+                <img src="/img/testimonials/user-photos/avatar-4.jpg" alt="User photo" class="testimonials__testimonial--user-photo">
+                <div class="testimonials__testimonial--content">
+                    <p class="testimonials__testimonial--header">Свадебная фотосъемка</p>
+                     <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic, doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
+                     <p class="testimonials__testimonial--name">Анастасия Е.</p>
+                </div>
+            </div>
+
+            <div class="testimonials__testimonial">
+                <img src="/img/testimonials/user-photos/avatar-5.jpg" alt="User photo" class="testimonials__testimonial--user-photo">
+                <div class="testimonials__testimonial--content">
+                    <p class="testimonials__testimonial--header">Love Story</p>
+                     <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic, doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
+                     <p class="testimonials__testimonial--name">Марина К.</p>
+                </div>
+            </div>
+
+            <div class="testimonials__testimonial">
+                <img src="/img/testimonials/user-photos/avatar-6.jpg" alt="User photo" class="testimonials__testimonial--user-photo">
+                <div class="testimonials__testimonial--content">
+                    <p class="testimonials__testimonial--header">Свадебная фотосъемка</p>
+                     <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic, doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
+                     <p class="testimonials__testimonial--name">Елена Т.</p>
+                </div>
+            </div>
+           </div>
+        
+        </section>
+
+        <script src="javascript/script.js"></script>
+
 
     </body>
 

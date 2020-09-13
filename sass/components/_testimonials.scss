@@ -1,0 +1,47 @@
+.testimonials {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+
+    &__testimonial {
+        display: flex;
+        align-items: flex-start;
+        width: 35%;
+        margin-bottom: 3rem;
+        padding: 3rem 1.5rem;
+
+        border: 3px solid var(--color-grey-light);
+        border-radius: 15px;
+        box-shadow: var(--shadow-light);
+
+        &--user-photo {
+            flex-shrink : 0;
+            display: inline-block;
+            margin-right: 3rem;
+            width: 13rem;
+            height: auto;
+            -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        &--content {
+            flex-shrink: 1;
+        }
+
+        &--header {
+            font-weight: 500;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+
+        &--text {
+            margin-bottom: 1rem;
+        }
+
+        &--name {
+            font-family: var(--font-display-2);
+            font-size: 3rem;
+        }
+
+    }
+}

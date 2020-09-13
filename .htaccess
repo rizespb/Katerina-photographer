@@ -1,0 +1,14 @@
+RewriteEngine On
+    #  Директива включает редиректы.
+RewriteBase /
+    # Без директивы (.*) = /$1 будет /var/wwww/site/web/$1  с директивой  = /$1
+
+# 1. Удалить www
+RewriteCond %{ENV:HTTPS} on
+    #Если включен https
+RewriteRule .* - [E=SSL:s]
+    #То создаем переменную  ssl с текстом s
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+    # Проверяем, содержит ли домен www в начале URL.
+RewriteRule ^(.*)$ http%{ENV:SSL}://%1/$1 [R=301,L]
+    # Перенаправляем удаляем www
