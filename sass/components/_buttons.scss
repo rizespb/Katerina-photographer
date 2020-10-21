@@ -8,6 +8,7 @@
     padding: 1rem;
     transition: all .2s;
     box-shadow: var(--shadow-btn);
+    font-family: var(--font-primary);
 
     &:active {
         transform: translateY(3px);

@@ -2,14 +2,64 @@
     column-count: 3;
     column-gap: 2rem;
 
+    @media only screen and (max-width: $bp-smallest) {
+        column-count: 2;
+        column-gap: 1.5rem;
+    }
+
     &__image {
         display: inline-block;
 
         width: 100%;
         height: auto;
+        cursor: pointer;
 
         &:not(:last-child) {
             margin-bottom: 2rem;
         }
+    }
+}
+
+.gallery-view-box {
+    display: none;
+    user-select: none;
+
+    &--active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 10000;
+
+        background: rgba(0, 0, 0, .5);
+        backdrop-filter: blur(7px);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+
+        & > img {
+            width: auto;
+            max-width: 95%;
+            height: auto;
+            max-height: 95%;
+
+            transition: all .5s;
+            
+        }
+
+    }
+    
+    &__close-btn {
+        color: var(--color-grey-light);
+        font-size: 5rem;
+
+        position: absolute;
+        top: 5rem;
+        right: 5rem;
+        cursor: pointer;
     }
 }

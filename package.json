@@ -1,7 +1,7 @@
 {
-  "name": "stantum",
+  "name": "Photo",
   "version": "1.0.0",
-  "description": "Stantum s.r.o. –  Software R&D company providing full-cycle custom engineering services. ",
+  "description": "Photographer Katerina Petrova, Saint-Petersburg",
   "main": "index.html",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",

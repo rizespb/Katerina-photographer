@@ -12,3 +12,8 @@ RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
     # Проверяем, содержит ли домен www в начале URL.
 RewriteRule ^(.*)$ http%{ENV:SSL}://%1/$1 [R=301,L]
     # Перенаправляем удаляем www
+
+# Перенаправление http -> https
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

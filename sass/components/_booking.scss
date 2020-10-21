@@ -6,19 +6,41 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: var(--shadow-dark);
     border-radius: 3px;
-    padding: 3rem 5rem;
-    background-color: var(--color-white);
+    font-family: var(--font-primary);
+    padding: 7rem 5rem;
+    background-image: url(../img/background-piece-of-paper.png);
+    background-size: 100% 100%;
 
     position: relative;
     transform: translateY(-50%);
-    z-index: 1200;
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 6rem 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        transform: translateY(0);
+        min-width: initial;
+        padding: 2rem;
+
+        background-image: none;
+        background-color: rgba(247, 247, 247, .7);
+        width: 90%;
+        margin: 5rem auto;
+    }
 
     &__heading {
-        font-size: 2.2rem;
+        font-size: 7rem;
         font-weight: 500;
         padding-bottom: 1rem;
+        font-family: var(--font-display-2);
+        text-align: center;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 4rem;
+            padding-bottom: 0;
+        }
     }
 
     &__description {
@@ -30,9 +52,24 @@
         width: 100%;
         margin-bottom: 2rem;
 
+        @media only screen and (max-width: $bp-small) {
+            transform: translateY(0);
+            min-width: initial;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;  
+            justify-items: center;
+            margin-bottom: 0rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-template-columns: 1fr;
+            gap: 2rem;  
+        }
+
         &--input {
             height: 5rem;
-            width: 21%;
+            width: 23%;
             font-size: 1.8rem;
             padding: 1rem 2rem;
             border-radius: 3px;
@@ -43,18 +80,49 @@
             
 
             &:not(:last-child) {
-                margin-right: 4%;
+                margin-right: 3%;
+            }
+
+            @media only screen and (max-width: $bp-large) {
+                padding: 1rem 1rem;
+                width: 21%;
+            }
+
+            @media only screen and (max-width: $bp-medium) {
+                
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                width: 90%;
             }
         }
 
         
         &--btn {
-            background-color: var(--color-beige);
+            background-color: var(--color-blue);
+            color: var(--color-white);
             color: var(--color-white);
             height: 5rem;
             float: right;
-            margin-right: 2rem;
+            margin-right: 1rem;
         }
+        
+// Поле для вывода результатов отправки сообщения из формы
+        &--result {
+            text-align: center;
+            padding: 1rem;
+            font-size: 2.2rem;
+            font-weight: 500;
+
+            @media only screen and (max-width: $bp-small) {
+                grid-area: 3 / 1 / 4  / -1;
+            }
+
+            @media only screen and (max-width: $bp-smallest) {
+                grid-area: 5 / 1 / 6 / -1;
+            }
+        }
+
     }
 
     &__consent {
@@ -66,8 +134,22 @@
         &--link:link,
         &--link:visited {
             text-decoration: none;
-            color: var(--color-beige)
+            color: var(--color-blue);
+
+            @media only screen and (max-width: $bp-small) {
+                font-weight: 500;
+            }
         }
     }
 
+
 }
+
+// Поле input для защиты от нежелательной почты
+
+#id-control-field {
+    display: none;
+    position: absolute;
+    left: -9999px;
+}
+

@@ -1,22 +1,19 @@
-// Montserrat (100, 300, 400, 500, 700) вместо Proxima
-
-
-
 // DELETE NON-USE FONTS from INDEX.HTML
 
 :root {
     --font-primary: 'Montserrat', sans-serif;
-    --font-secondary: 'Lato', sans-serif;
     --font-display: 'Playfair Display', serif;
     --font-display-2: 'Denistina', serif;
 
     --color-white: #fff;
     --color-black: #000;
     --color-font-grey: #222;
-    --color-beige: #ceb285;
+    --color-beige: #ef7c52;
     --color-grey-light: #e7e7e7;
     --color-input-back: #f0f0f0;
     --color-grey-background: #f7f7f7;
+    --color-blue: #4ebbbc;
+    --color-peach: #ef7c52;
     
 
     
@@ -29,11 +26,14 @@
 
     --line: 1px solid var(--color-grey-light-2);
 
+    --max-width: 200rem;
+
 }
 
 
 // RESPOSIVE PREAKPOINTS
-$bp-largest: 75em;   // 1200px
-$bp-large: 56.25em;   // 900px
-$bp-medium: 37.5em;    // 600px
-$bp-small: 25em;   // 400px
+$bp-largest: 110em;   // 1760px 
+$bp-large: 75em;   // 1200px 
+$bp-medium: 62.5em;    // 1000px
+$bp-small: 50em;   // 800px
+$bp-smallest: 37.5em;   // 600px

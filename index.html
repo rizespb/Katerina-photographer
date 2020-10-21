@@ -5,20 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700&family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="resources/favicon/favicon.png">
 
-        <script src="js/modernizr.js"></script> <!-- Modernizr -->
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
         <title>Фотограф Катерина Петрова</title>
     </head>
 
     <body>
         
-        <nav class="navigation">
-            <ul class="navigation__list">
+        <div class="menu-btn" id="id-menu-btn">
+            <div class="menu-btn__icon" id="id-menu-btn__icon"></div>
+        </div>
+
+        <nav class="navigation" id="id-navigation">
+            <ul class="navigation__list" id="id-navigation-list">
                 <li class="navigation__list--item">
                     <a href="/" class="navigation__list--link">Главная</a>
                 </li>
@@ -38,7 +42,7 @@
                     <a href="#id-section-testimonials" class="navigation__list--link">Отзывы</a>
                 </li>
                 <li class="navigation__list--item">
-                    <a href="#id-contacts-block" class="navigation__list--link">Контакты</a>
+                    <a href="#footer" class="navigation__list--link">Контакты</a>
                 </li>
             </ul>
         </nav>
@@ -46,18 +50,44 @@
         <header class="section-header">
 
             <div class="header-slider">
-                <img src="img/slider/slider-image-1.jpg" alt="Photo 1" class="header-slider__image" id="sliderID-1">
-                <img src="img/slider/slider-image-2.jpg" alt="Photo 2" class="header-slider__image" id="sliderID-2">
-                <img src="img/slider/slider-image-3.jpg" alt="Photo 3" class="header-slider__image" id="sliderID-3">
-                <img src="img/slider/slider-image-4.jpg" alt="Photo 4" class="header-slider__image" id="sliderID-4">
+                <img srcset="img/slider/1920/slider-image-1.jpg 1920w,
+                            img/slider/1500/slider-image-1.jpg 1500w,
+                            img/slider/1000/slider-image-1.jpg 1000w,
+                            img/slider/600/slider-image-1.jpg 600w"
+                    sizes="(max-width: 200em) 100vw" 
+                    alt="Photo 1" class="header-slider__image" id="sliderID-1"
+                    src="img/slider/1920/slider-image-1.jpg">
+            <img srcset="img/slider/1920/slider-image-2.jpg 1920w,
+                         img/slider/1500/slider-image-2.jpg 1500w,
+                         img/slider/1000/slider-image-2.jpg 1000w,
+                         img/slider/600/slider-image-2.jpg 600w"
+                    sizes="(max-width: 200em) 100vw" 
+                    alt="Photo 2" class="header-slider__image" id="sliderID-2"
+                    src="img/slider/1920/slider-image-2.jpg">
+            <img srcset="img/slider/1920/slider-image-3.jpg 1920w,
+                         img/slider/1500/slider-image-3.jpg 1500w,
+                         img/slider/1000/slider-image-3.jpg 1000w,
+                         img/slider/600/slider-image-3.jpg 600w"
+                    sizes="(max-width: 200em) 100vw"
+                    alt="Photo 3" class="header-slider__image" id="sliderID-3"
+                    src="img/slider/1920/slider-image-3.jpg">
+            <img srcset="img/slider/1920/slider-image-4.jpg 1920w,
+                         img/slider/1500/slider-image-4.jpg 1500w,
+                         img/slider/1000/slider-image-4.jpg 1000w,
+                         img/slider/600/slider-image-4.jpg 600w"
+                    sizes="(max-width: 200em) 100vw" 
+                    alt="Photo 4" class="header-slider__image" id="sliderID-4"
+                    src="img/slider/1920/slider-image-4.jpg">
             </div>
+
+            
 
             <div class="section-header__front">
                 
 
                 <p class="section-header__front--heading-regular">Фотограф</p>
                 <h2 class="heading-2">Катерина Петрова</h2>
-                <p class="section-header__front--heading-italics">Красивая подпись, надо придумать</p>
+                <p class="section-header__front--heading-italics">Душевные фотосессии в Петербурге</p>
             </div>
 
         </header>
@@ -67,18 +97,22 @@
         <section class="section-about" id="id-section-about">
 
             <div class="booking">
-                <p class="booking__heading">Забронировать дату</p>
-                <p class="booking__description">Короткое описание</p>
+                <p class="booking__heading">Выбрать дату фотосессии</p>
+                <p class="booking__description"></p>
 
-                <form action="php/sendmail.php" method="POST" class="booking__form" id="id-booking__form">
-                    <input type="text" class="booking__form--input" id="id-booking__name" placeholder="Ваше имя">
-                    <input type="text" class="booking__form--input" id="id-booking__tel" placeholder="Ваш телефон">
-                    <input type="text" class="booking__form--input" id="id-booking__date" placeholder="Желаемая дата">
+                <form class="booking__form" name="booking__form" id="id-booking__form">
+                    <input type="text" class="booking__form--input" id="id-booking__name" placeholder="Ваше имя" required>
+                    <input type="text" class="booking__form--input" id="id-booking__tel" placeholder="Ваш телефон" required pattern="[0-9]*" maxlength=15>
+                    <input type="text" class="booking__form--input" id="id-booking__date" placeholder="Желаемая дата" required>
 
-                    <button class="btn booking__form--btn" type="submit" form="id-booking__form">Отправить</button>
+                    <input id="id-control-field">
+                    
+                    <button class="btn booking__form--btn" id="id-booking__form--btn" form="booking__form">Бронировать</button>
+                    <!-- блок для вывода сообщения об успешной отправке -->
+                    <div class="booking__form--result"></div>
                 </form>
 
-                <p class="booking__consent">Нажимая кнопку «Отправить», Вы даете свое согласие на обработку персональных данных в соответствии с <a href="#" class="booking__consent--link">политикой конфиденциальности</a>.</p>
+                <p class="booking__consent">Нажимая кнопку «Бронировать», Вы даете свое согласие на обработку персональных данных в соответствии с <a href="/resources/politica-konfidecialnosti-katerinapetrova.ru.pdf" class="booking__consent--link" target="_blank">политикой конфиденциальности</a>.</p>
             </div>
 
             <h1 class="section-about__heading-1 heading-1">Обо мне</h1>
@@ -90,8 +124,8 @@
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores possimus ex quod. Ducimus tempora laborum tenetur consectetur itaque exercitationem, ipsum sequi odit quidem tempore repudiandae doloremque ea quia asperiores consequuntur. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores possimus ex quod. Ducimus tempora laborum tenetur consectetur itaque exercitationem, ipsum sequi odit quidem tempore repudiandae doloremque ea quia asperiores consequuntur.
                     </div>
                     <div class="section-about__content--name">Фотограф Катерина Петрова</div>
-                    <button class="btn section-about__content--btn">Консультация</button>
-                    <div class="section-about__content--wish">Удачной съемки!</div>
+                    <!-- <button class="btn section-about__content--btn">Консультация</button> -->
+                    <div class="section-about__content--wish">Фотографирую счастье!</div>
                 </div>
 
                 <img src="img/image-about-me.jpg" alt="Beautiful photo" class="section-about__content--img">
@@ -105,44 +139,44 @@
             <div class="portfolio">
 
                 <div class="portfolio__image-box">
-                    <img src="img/portfolio/photo-1.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
-                    <a href="#" class="portfolio__image-box--link">
-                        <span class="portfolio__image-box--link-text">Интересный текст ссылки</span>
+                    <img src="img/portfolio/gallery-1/gallery-1-preview.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
+                    <a href="/portfolio/gallery-1.html" class="portfolio__image-box--link">
+                        <span class="portfolio__image-box--link-text">Love Story Дарья и Алексей</span>
                     </a>
                 </div>
 
                 <div class="portfolio__image-box">
-                    <img src="img/portfolio/photo-2.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
-                    <a href="#" class="portfolio__image-box--link">
-                        <span class="portfolio__image-box--link-text">Интересный текст ссылки</span>
+                    <img src="img/portfolio/gallery-2/gallery-2-preview.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
+                    <a href="/portfolio/gallery-2.html" class="portfolio__image-box--link">
+                        <span class="portfolio__image-box--link-text">Ольга, портретная съемка</span>
                     </a>
                 </div>
 
                 <div class="portfolio__image-box">
-                    <img src="img/portfolio/photo-3.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
-                    <a href="#" class="portfolio__image-box--link">
-                        <span class="portfolio__image-box--link-text">Интересный текст ссылки</span>
+                    <img src="img/portfolio/gallery-3/gallery-3-preview.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
+                    <a href="/portfolio/gallery-3.html" class="portfolio__image-box--link">
+                        <span class="portfolio__image-box--link-text">Юлия и дог Макс</span>
                     </a>
                 </div>
 
                 <div class="portfolio__image-box">
-                    <img src="img/portfolio/photo-4.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
-                    <a href="#" class="portfolio__image-box--link">
-                        <span class="portfolio__image-box--link-text">Интересный текст ссылки</span>
+                    <img src="img/portfolio/gallery-4/gallery-4-preview.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
+                    <a href="/portfolio/gallery-4.html" class="portfolio__image-box--link">
+                        <span class="portfolio__image-box--link-text">Азиз, портретная съемка</span>
                     </a>
                 </div>
 
                 <div class="portfolio__image-box">
-                    <img src="img/portfolio/photo-5.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
-                    <a href="#" class="portfolio__image-box--link">
-                        <span class="portfolio__image-box--link-text">Интересный текст ссылки</span>
+                    <img src="img/portfolio/gallery-5/gallery-5-preview.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
+                    <a href="/portfolio/gallery-5.html" class="portfolio__image-box--link">
+                        <span class="portfolio__image-box--link-text">Love Story Ирина и Дмитрий</span>
                     </a>
                 </div>
 
                 <div class="portfolio__image-box">
-                    <img src="img/portfolio/photo-6.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
-                    <a href="#" class="portfolio__image-box--link">
-                        <span class="portfolio__image-box--link-text">Интересный текст ссылки</span>
+                    <img src="img/portfolio/gallery-6/gallery-6-preview.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
+                    <a href="/portfolio/gallery-6.html" class="portfolio__image-box--link">
+                        <span class="portfolio__image-box--link-text">Анастасия и Эфа</span>
                     </a>
                 </div>
 
@@ -161,66 +195,67 @@
 
                 <div class="card">
                     <div class="card__title">Индивидуальная фотосъемка</div>
-                    <div class="card__price">10 000</div>
+                    
 
                     <div class="card__description">
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Первая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Вторая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Третья очень длинная строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Короткая четвертая</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Пятая строка еще длиннее, чем четвертая. Очень длинная</p>
-                        <p class="card__description--feature"><i class="card__description--icon card__description--icon fas fa-camera"></i>Шестая строка средней длинны</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Первая строка описания</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Вторая строка описания</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Третья очень длинная строка описания</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Короткая четвертая</p>
                     </div>
 
-                    <button class="btn card__btn">Забронировать</button>
+                    <div class="card__price">10 000 ₽</div>
+
+                    <button class="btn card__btn"><a href="#id-booking-footer" class="card__link">Выбрать</a></button>
                 </div>
 
                 <div class="card">
                     <div class="card__title">Семейная фотосъемка</div>
-                    <div class="card__price">14 000</div>
+                    
 
                     <div class="card__description">
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Первая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Вторая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Третья очень длинная строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Короткая четвертая</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Пятая строка еще длиннее, чем четвертая. Очень длинная</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Шестая строка средней длинны</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Первая строка описания</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Вторая строка описания</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Третья очень длинная строка описания</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Короткая четвертая</p>
                     </div>
 
-                    <button class="btn card__btn">Забронировать</button>
+                    <div class="card__price">14 000 ₽</div>
+
+                    <button class="btn card__btn"><a href="#id-booking-footer" class="card__link">Выбрать</a></button>
                 </div>
 
                 <div class="card">
                     <div class="card__title">Love story</div>
-                    <div class="card__price">15 000</div>
+                    
 
                     <div class="card__description">
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Первая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Вторая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Третья очень длинная строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Короткая четвертая</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Пятая строка еще длиннее, чем четвертая. Очень длинная</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Шестая строка средней длинны</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Первая строка описания</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Вторая строка описания</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Третья очень длинная строка описания</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Короткая четвертая</p>
                     </div>
 
-                    <button class="btn card__btn">Забронировать</button>
+                    <div class="card__price">15 000 ₽</div>
+
+                    <button class="btn card__btn"><a href="#id-booking-footer" class="card__link">Выбрать</a></button>
                 </div>
 
                 <div class="card">
                     <div class="card__title">Свадебная фотосъемка</div>
-                    <div class="card__price">40 000</div>
+                    
 
                     <div class="card__description">
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Первая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Вторая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Третья очень длинная строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Короткая четвертая</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Пятая строка еще длиннее, чем четвертая. Очень длинная</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-camera"></i>Шестая строка средней длинны</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Первая строка описания</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Вторая строка описания</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Третья очень длинная строка описания</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Короткая четвертая</p>
+                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Шестая строка средней длинны</p>
                     </div>
 
-                    <button class="btn card__btn">Забронировать</button>
+                    <div class="card__price">40 000 ₽</div>
+
+                    <button class="btn card__btn"><a href="#id-booking-footer" class="card__link">Выбрать</a></button>
                 </div>
 
             </div>
@@ -229,24 +264,28 @@
 
         
 
-        <footer class="section-footer">
+        <footer class="section-footer" id="footer">
 
             <div class="booking" id="id-booking-footer">
-                <p class="booking__heading">Забронировать дату</p>
-                <p class="booking__description">Короткое описание</p>
+                <p class="booking__heading">Выбрать дату фотосессии</p>
+                <p class="booking__description"></p>
 
-                <form action="#" class="booking__form">
-                    <input type="text" class="booking__form--input" id="booking__name" placeholder="Ваше имя">
-                    <input type="text" class="booking__form--input" id="booking__tel" placeholder="Ваш телефон">
-                    <input type="text" class="booking__form--input" id="booking__date" placeholder="Желаемая дата">
+                <form class="booking__form" name="booking__form" id="id-booking__form">
+                    <input type="text" class="booking__form--input" id="id-booking__name" placeholder="Ваше имя" required>
+                    <input type="text" class="booking__form--input" id="id-booking__tel" placeholder="Ваш телефон" required pattern="[0-9]*" maxlength=15>
+                    <input type="text" class="booking__form--input" id="id-booking__date" placeholder="Желаемая дата" required>
 
-                    <button class="btn booking__form--btn">Отправить</button>
+                    <input id="id-control-field">
+                    
+                    <button class="btn booking__form--btn" id="id-booking__form--btn" form="booking__form">Бронировать</button>
+                    <!-- блок для вывода сообщения об успешной отправке -->
+                    <div class="booking__form--result"></div>
                 </form>
 
-                <p class="booking__consent">Нажимая кнопку «Отправить», Вы даете свое согласие на обработку персональных данных в соответствии с <a href="#" class="booking__consent--link">политикой конфиденциальности</a>.</p>
+                <p class="booking__consent">Нажимая кнопку «Бронировать», Вы даете свое согласие на обработку персональных данных в соответствии с <a href="/resources/politica-konfidecialnosti-katerinapetrova.ru.pdf" class="booking__consent--link" target="_blank">политикой конфиденциальности</a>.</p>
             </div>
 
-            <address class="contacts-block" id="id-contacts-block">
+            <address class="contacts-block">
 
                 <div class="contacts-block__text">
                     <p>Чувствуете покалывание на кончиках пальцев?</p>
@@ -254,7 +293,7 @@
                 </div>
 
                 <div class="contacts-block__contacts">
-                    <p>Фотограф Катерина Петрова</p>
+                    <p><span> Фотограф </span><span>Катерина Петрова</span></p>
                     <a href="tel:+79030932933">+7 903 093 29 33</a>
                     <a href="mailto:info@katerinapetrova.ru">info@katerinapetrova.ru</a>
                 </div>
@@ -268,24 +307,40 @@
 
         <section class="section-gallery">
 
-            <div class="gallery">
-                <img src="img/gallery/photo-1.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-2.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-3.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-4.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-5.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-6.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-7.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-8.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-9.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-10.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-11.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-12.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-13.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-14.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-15.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-16.jpg" alt="Beautiful photo" class="gallery__image">
-                <img src="img/gallery/photo-17.jpg" alt="Beautiful photo" class="gallery__image">
+            <div class="gallery gallery-container">
+                <img src="img/footer-gallery/photo-0.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-0">
+                <img src="img/footer-gallery/photo-1.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-1">
+                <img src="img/footer-gallery/photo-2.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-2">
+                <img src="img/footer-gallery/photo-3.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-3">
+                <img src="img/footer-gallery/photo-4.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-4">
+                <img src="img/footer-gallery/photo-5.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-5">
+                <img src="img/footer-gallery/photo-6.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-6">
+                <img src="img/footer-gallery/photo-7.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-7">
+                <img src="img/footer-gallery/photo-8.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-8">
+                <img src="img/footer-gallery/photo-9.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-9">
+                <img src="img/footer-gallery/photo-10.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-10">
+                <img src="img/footer-gallery/photo-11.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-11">
+                <img src="img/footer-gallery/photo-12.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-12">
+                <img src="img/footer-gallery/photo-13.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-13">
+                <img src="img/footer-gallery/photo-14.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-14">
+                <img src="img/footer-gallery/photo-15.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-15">
+                <img src="img/footer-gallery/photo-16.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-16">
+                <img src="img/footer-gallery/photo-17.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-17">
+                <img src="img/footer-gallery/photo-18.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-18">
+                <img src="img/footer-gallery/photo-19.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-19">
+                <img src="img/footer-gallery/photo-20.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-20">
+                <img src="img/footer-gallery/photo-21.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-21">
+                <img src="img/footer-gallery/photo-22.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-22">
+                <img src="img/footer-gallery/photo-23.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-23">
+                <img src="img/footer-gallery/photo-24.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-24">
+                <img src="img/footer-gallery/photo-25.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-25">
+                <img src="img/footer-gallery/photo-26.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-26">
+                <img src="img/footer-gallery/photo-27.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-27">
+                <img src="img/footer-gallery/photo-28.jpg" alt="Beautiful photo" class="gallery__image" id="galleryImageID-28">
+            </div>
+
+            <div class="gallery-view-box" id="galleryViewBoxID">
+                <i class="fas fa-times gallery-view-box__close-btn" id="ID-close-btn"></i>
             </div>
 
         </section>
@@ -349,18 +404,11 @@
            </div>
         
         </section>
-
+            
+    
         <script src="javascript/script.js"></script>
-
-
+        <script src="javascript/gallery-viewer.js"></script>
+        <script src="javascript/lazy-scroll.js"></script>
     </body>
 
 </html>
-
-<!-- //////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////
-
-https://maratgismatullin.com/
-
-//////////////
-///////////////////////////////////////////////////////////////////////////////////////////////// -->
