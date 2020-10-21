@@ -8,7 +8,9 @@
       galleryImageClass: 'gallery__image',
       galleryViewBoxActiveClass: 'gallery-view-box--active',
       viewBoxID: 'galleryViewBoxID',
-      closeButtonID: 'ID-close-btn'
+      closeButtonID: 'ID-close-btn',
+      arrowLeft: 'ID-arrow-left',
+      arrowRight: 'ID-arrow-right'
     };
     
     // В переменную viewBox сохраняем узел - контрейнер для просмотра изображений
@@ -17,11 +19,20 @@
     // Получаем Node List всех изображений
     let imageNodeList = document.querySelectorAll(`.${DOM.galleryImageClass}`);
     
+
     // Навешиваем обработчик на каждое изображение в галлерее и описываем функцию открытия изображения в просмотрщике view-box
     for (let i = 0; i < imageNodeList.length; i++) {
     
       imageNodeList[i].addEventListener('click', newImage);
     }
+
+    // Навешиваем обработчик событий на стрелки перелистывания изображений влево и вправо
+    document.getElementById(DOM.arrowLeft).addEventListener('click', previousImage);
+    document.getElementById(DOM.arrowRight).addEventListener('click', nextImage);
+
+    //viewBox.addEventListener('click', nextImage); // Перелистывание изображений кликом в любом месте экрана
+    //viewBox.addEventListener('touchmove', nextImage); // Перелистывание изображений свайпом
+
     
     // Функция вывода изображения в просмотрщик при клике на любое изображение галлереи
     function newImage(element) {
@@ -38,6 +49,8 @@
     
       viewBox.insertAdjacentHTML("afterbegin", newElement); 
     };
+
+
     
     // Закрываем просмотр изображение при клике на крестик
     document.getElementById(DOM.closeButtonID).addEventListener('click', function(event) {
@@ -51,13 +64,11 @@
       viewBox.firstChild.remove();
     });
     
-    viewBox.addEventListener('click', nextImage);
-    viewBox.addEventListener('touchmove', nextImage);
-    
+
+
     // Функция вывода следующего изображения при клике на область просмотра (на view-box)
     function nextImage() {
       let activeImageID = parseInt(viewBox.firstChild.id.split('-')[1]);
-      console.log(activeImageID);
     
       // Задаем ID следующего изображения, проверяя, не является ли изображение последним в контейнере
       let nextImageID;
@@ -79,5 +90,31 @@
       viewBox.insertAdjacentHTML("afterbegin", nextElement); 
     
     }
+
+
+
+    // Функция вывода предыдущего изображения при клике на область просмотра (на view-box)
+    function previousImage() {
+      let activeImageID = parseInt(viewBox.firstChild.id.split('-')[1]);
+      console.log(activeImageID);
     
+      // Задаем ID следующего изображения, проверяя, не является ли изображение последним в контейнере
+      let previousImageID;
+      if (activeImageID === 0 ) {
+        previousImageID = imageNodeList.length - 1;
+      } else {
+        previousImageID = activeImageID - 1;
+      }
+    
+      // Путь к файлу следующего изображения
+      let previousImageSrc = document.querySelector(`#galleryImageID-${previousImageID}`).src;
+    
+      // Удаляем в просмотрщике первый и единственный дочерний элемент
+      document.getElementById('galleryViewBoxID').firstChild.remove();
+    
+      let previousElement = `<img src="${previousImageSrc}" alt="Beautiful photo" id="#galleryImageID-${previousImageID}">`;
+    
+      viewBox.insertAdjacentHTML("afterbegin", previousElement); 
     }
+    
+}

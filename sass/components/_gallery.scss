@@ -62,4 +62,29 @@
         right: 5rem;
         cursor: pointer;
     }
+
+    &__arrow--left,
+    &__arrow--right {
+        position: absolute;
+        top: 50%;
+        font-size: 5rem;
+        color: var(--color-grey-light);
+        cursor: pointer;
+    }
+
+    &__arrow--left {
+        left: 10rem;
+
+        @media only screen and (max-width: $bp-small) {
+            left: 1rem;
+        }
+    }
+
+    &__arrow--right {
+        right: 10rem;
+
+        @media only screen and (max-width: $bp-small) {
+            right: 1rem;
+        }
+    }
 }
