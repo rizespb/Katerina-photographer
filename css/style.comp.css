@@ -346,6 +346,24 @@ section {
     top: 5rem;
     right: 5rem;
     cursor: pointer; }
+  .gallery-view-box__arrow--left, .gallery-view-box__arrow--right {
+    position: absolute;
+    top: 50%;
+    font-size: 5rem;
+    color: var(--color-grey-light);
+    cursor: pointer; }
+  .gallery-view-box__arrow--left {
+    left: 10rem; }
+    @media only screen and (max-width: 50em) {
+      .gallery-view-box__arrow--left {
+        left: 1rem;
+        font-size: 7rem; } }
+  .gallery-view-box__arrow--right {
+    right: 10rem; }
+    @media only screen and (max-width: 50em) {
+      .gallery-view-box__arrow--right {
+        right: 1rem;
+        font-size: 7rem; } }
 
 .header-slider {
   width: 100%;
@@ -741,15 +759,27 @@ section {
   align-items: center;
   padding: 0 10rem 15rem 10rem;
   min-height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background-contacts.jpg);
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background-contacts-1500.jpg);
   background-size: cover;
-  background-position: center; }
+  background-position: center top;
+  background-attachment: fixed; }
+  @media only screen and (min-width: 110em) {
+    .section-footer {
+      padding: 0 5rem 5rem 5rem;
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background-contacts-1920.jpg); } }
   @media only screen and (max-width: 75em) {
     .section-footer {
       padding: 0 5rem 5rem 5rem; } }
   @media only screen and (max-width: 50em) {
     .section-footer {
+      padding: 0 0 5rem 0;
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background-contacts-1000.jpg); } }
+  @media only screen and (max-width: 50em) {
+    .section-footer {
       padding: 0 0 5rem 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-footer {
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background-contacts-600.jpg); } }
 
 .section-testimonials {
   padding: 3rem; }
@@ -759,4 +789,5 @@ section {
 
 @font-face {
   font-family: Denistina;
-  src: url(../vendors/fonts/Denistina.ttf); }
+  src: url(../vendors/fonts/Denistina.ttf);
+  font-display: swap; }

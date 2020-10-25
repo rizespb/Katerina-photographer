@@ -231,9 +231,18 @@
     background-image: linear-gradient(
         to right bottom,
         rgba(0,0,0, 0.5),
-        rgba(0,0,0, 0.5)), url(../img/background-contacts.jpg);
+        rgba(0,0,0, 0.5)), url(../img/background-contacts-1500.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center top;
+    background-attachment: fixed;
+
+    @media only screen and (min-width: $bp-largest) {
+        padding: 0 5rem 5rem 5rem;
+        background-image: linear-gradient(
+        to right bottom,
+        rgba(0,0,0, 0.5),
+        rgba(0,0,0, 0.5)), url(../img/background-contacts-1920.jpg);
+    }
 
     @media only screen and (max-width: $bp-large) {
         padding: 0 5rem 5rem 5rem;
@@ -241,6 +250,21 @@
 
     @media only screen and (max-width: $bp-small) {
         padding: 0 0 5rem 0;
+        background-image: linear-gradient(
+        to right bottom,
+        rgba(0,0,0, 0.5),
+        rgba(0,0,0, 0.5)), url(../img/background-contacts-1000.jpg);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 0 0 5rem 0;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        background-image: linear-gradient(
+        to right bottom,
+        rgba(0,0,0, 0.5),
+        rgba(0,0,0, 0.5)), url(../img/background-contacts-600.jpg);
     }
 }
 

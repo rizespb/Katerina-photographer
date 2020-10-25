@@ -66,7 +66,7 @@
     
 
 
-    // Функция вывода следующего изображения при клике на область просмотра (на view-box)
+    // Функция вывода следующего изображения при клике на стрелку вправо
     function nextImage() {
       let activeImageID = parseInt(viewBox.firstChild.id.split('-')[1]);
     
@@ -93,7 +93,7 @@
 
 
 
-    // Функция вывода предыдущего изображения при клике на область просмотра (на view-box)
+    // Функция вывода предыдущего изображения при клике на стрелку влево
     function previousImage() {
       let activeImageID = parseInt(viewBox.firstChild.id.split('-')[1]);
       console.log(activeImageID);
