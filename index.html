@@ -1,564 +1,583 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="resources/favicon/favicon.png">
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <title>Фотограф Катерина Петрова</title>
-    </head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="resources/favicon/favicon.png">
 
-    <body>
-        
-        <div class="menu-btn" id="id-menu-btn">
-            <div class="menu-btn__icon" id="id-menu-btn__icon"></div>
-        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        <nav class="navigation" id="id-navigation">
-            <ul class="navigation__list" id="id-navigation-list">
-                <li class="navigation__list--item">
-                    <a href="/" class="navigation__list--link">Главная</a>
-                </li>
-                <li class="navigation__list--item">
-                    <a href="#id-section-about" class="navigation__list--link">Обо мне</a>
-                </li>
-                <li class="navigation__list--item">
-                    <a href="#id-section-portfolio" class="navigation__list--link">Портфолио</a>
-                </li>
-                <li class="navigation__list--item">
-                    <a href="#id-section-price" class="navigation__list--link">Стоимость</a>
-                </li>
-                <li class="navigation__list--item">
-                    <a href="#id-booking-footer" class="navigation__list--link">Забронировать</a>
-                </li>
-                <li class="navigation__list--item">
-                    <a href="#id-section-testimonials" class="navigation__list--link">Отзывы</a>
-                </li>
-                <li class="navigation__list--item">
-                    <a href="#footer" class="navigation__list--link">Контакты</a>
-                </li>
-            </ul>
-        </nav>
+    <title>Фотограф Катерина Петрова</title>
+</head>
 
-        <header class="section-header">
+<body>
 
-            <div class="header-slider">
-                <img srcset="img/slider/1920/slider-image-1-1920.jpg 1920w,
+    <div class="menu-btn" id="id-menu-btn">
+        <div class="menu-btn__icon" id="id-menu-btn__icon"></div>
+    </div>
+
+    <nav class="navigation" id="id-navigation">
+        <ul class="navigation__list" id="id-navigation-list">
+            <li class="navigation__list--item">
+                <a href="/" class="navigation__list--link">Главная</a>
+            </li>
+            <li class="navigation__list--item">
+                <a href="#id-section-about" class="navigation__list--link">Обо мне</a>
+            </li>
+            <li class="navigation__list--item">
+                <a href="#id-section-portfolio" class="navigation__list--link">Портфолио</a>
+            </li>
+            <li class="navigation__list--item">
+                <a href="#id-section-price" class="navigation__list--link">Стоимость</a>
+            </li>
+            <li class="navigation__list--item">
+                <a href="#id-booking-footer" class="navigation__list--link">Забронировать</a>
+            </li>
+            <li class="navigation__list--item">
+                <a href="#id-section-testimonials" class="navigation__list--link">Отзывы</a>
+            </li>
+            <li class="navigation__list--item">
+                <a href="#footer" class="navigation__list--link">Контакты</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="section-header">
+
+        <div class="header-slider">
+            <img srcset="img/slider/1920/slider-image-1-1920.jpg 1920w,
                              img/slider/1500/slider-image-1-1500.jpg 1500w,
                              img/slider/1000/slider-image-1-1000-1000.jpg 1000w,
-                             img/slider/600/slider-image-1-600.jpg 600w"
-                    sizes="(max-width: 200em) 100vw" 
-                    alt="Photo 1" class="header-slider__image" id="sliderID-1"
-                    src="img/slider/1920/slider-image-1.jpg">
-                <img srcset="img/slider/1920/slider-image-2-1920.jpg 1920w,
+                             img/slider/600/slider-image-1-600.jpg 600w" sizes="(max-width: 200em) 100vw" alt="Photo 1"
+                class="header-slider__image" id="sliderID-1" src="img/slider/1920/slider-image-1.jpg">
+            <img srcset="img/slider/1920/slider-image-2-1920.jpg 1920w,
                              img/slider/1500/slider-image-2-1500.jpg 1500w,
                              img/slider/1000/slider-image-2-1000.jpg 1000w,
-                             img/slider/600/slider-image-2-600.jpg 600w"
-                    sizes="(max-width: 200em) 100vw" 
-                    alt="Photo 2" class="header-slider__image" id="sliderID-2"
-                    src="img/slider/1920/slider-image-2.jpg">
-                <img srcset="img/slider/1920/slider-image-3-1920.jpg 1920w,
+                             img/slider/600/slider-image-2-600.jpg 600w" sizes="(max-width: 200em) 100vw" alt="Photo 2"
+                class="header-slider__image" id="sliderID-2" src="img/slider/1920/slider-image-2.jpg">
+            <img srcset="img/slider/1920/slider-image-3-1920.jpg 1920w,
                              img/slider/1500/slider-image-3-1500.jpg 1500w,
                              img/slider/1000/slider-image-3-1000.jpg 1000w,
-                             img/slider/600/slider-image-3-600.jpg 600w"
-                    sizes="(max-width: 200em) 100vw"
-                    alt="Photo 3" class="header-slider__image" id="sliderID-3"
-                    src="img/slider/1920/slider-image-3.jpg">
-                <img srcset="img/slider/1920/slider-image-4-1920.jpg 1920w,
+                             img/slider/600/slider-image-3-600.jpg 600w" sizes="(max-width: 200em) 100vw" alt="Photo 3"
+                class="header-slider__image" id="sliderID-3" src="img/slider/1920/slider-image-3.jpg">
+            <img srcset="img/slider/1920/slider-image-4-1920.jpg 1920w,
                              img/slider/1500/slider-image-4-1500.jpg 1500w,
                              img/slider/1000/slider-image-4-1000.jpg 1000w,
-                             img/slider/600/slider-image-4-600.jpg 600w"
-                    sizes="(max-width: 200em) 100vw" 
-                    alt="Photo 4" class="header-slider__image" id="sliderID-4"
-                    src="img/slider/1920/slider-image-4.jpg">
+                             img/slider/600/slider-image-4-600.jpg 600w" sizes="(max-width: 200em) 100vw" alt="Photo 4"
+                class="header-slider__image" id="sliderID-4" src="img/slider/1920/slider-image-4.jpg">
+        </div>
+
+
+
+        <div class="section-header__front">
+
+
+            <p class="section-header__front--heading-regular">Фотограф</p>
+            <h2 class="heading-2">Катерина Петрова</h2>
+            <p class="section-header__front--heading-italics">Душевные фотосессии в Петербурге</p>
+        </div>
+
+    </header>
+
+
+
+    <section class="section-about" id="id-section-about">
+
+        <div class="booking">
+            <p class="booking__heading">Выбрать дату фотосессии</p>
+            <p class="booking__description"></p>
+
+            <form class="booking__form" name="booking__form" id="id-booking__form">
+                <input type="text" class="booking__form--input" id="id-booking__name" placeholder="Ваше имя" required>
+                <input type="text" class="booking__form--input" id="id-booking__tel" placeholder="Ваш телефон" required
+                    pattern="[0-9]*" maxlength=15>
+                <input type="text" class="booking__form--input" id="id-booking__date" placeholder="Желаемая дата"
+                    required>
+
+                <input id="id-control-field">
+
+                <button class="btn booking__form--btn" id="id-booking__form--btn"
+                    form="booking__form">Бронировать</button>
+                <!-- блок для вывода сообщения об успешной отправке -->
+                <div class="booking__form--result" id="id-booking__form--result"></div>
+            </form>
+
+            <p class="booking__consent">Нажимая кнопку «Бронировать», Вы даете свое согласие на обработку персональных
+                данных в соответствии с <a href="/resources/politica-konfidecialnosti-katerinapetrova.ru.pdf"
+                    class="booking__consent--link" target="_blank">политикой конфиденциальности</a>.</p>
+        </div>
+
+        <h1 class="section-about__heading-1 heading-1">Обо мне</h1>
+
+        <div class="section-about__content">
+
+            <div class="section-about__content--text-box">
+                <div class="section-about__content--text">
+                    Меня зовут Катерина, я занимаюсь портретной, семейной и lovestory фотографией в Санкт-Петербурге.
+                    Увлекаюсь фотографией более 7 лет, работаю профессионально уже более 4-х лет.
+                    Постоянно обучаюсь и наращиваю техническую базу.
+                    Для свадебной фотосессии всегда на готове два комплекта оборудования, работаю без форс-мажоров!
+                    Помогу спланировать место съемки, выбрать студию и визажиста (при необходимости).
+                    Съемка будет в легкой и непринужденной обставноке, обязательно будет много смеха и веселья!
+                    Если вы ботитесь камеры и не любите свои фото, со мной вы будете их разглядывать и восхищаться еще
+                    много лет!
+                </div>
+                <div class="section-about__content--name">Фотограф Катерина Петрова</div>
+                <div class="section-about__content--wish">Фотографирую счастье!</div>
             </div>
 
-            
+            <img src="img/image-about-me.jpg" alt="Beautiful photo" class="section-about__content--img">
+        </div>
 
-            <div class="section-header__front">
-                
+    </section>
 
-                <p class="section-header__front--heading-regular">Фотограф</p>
-                <h2 class="heading-2">Катерина Петрова</h2>
-                <p class="section-header__front--heading-italics">Душевные фотосессии в Петербурге</p>
+
+    <section class="section-portfolio" id="id-section-portfolio">
+
+        <div class="portfolio">
+
+            <div class="portfolio__image-box">
+                <img src="img/portfolio/gallery-1/gallery-1-preview.jpg" alt="Beautiful photo"
+                    class="portfolio__image-box--image">
+                <a href="/portfolio/gallery-1.html" class="portfolio__image-box--link">
+                    <span class="portfolio__image-box--link-text">Love Story Дарья и Алексей</span>
+                </a>
             </div>
 
-        </header>
-
-
-
-        <section class="section-about" id="id-section-about">
-
-            <div class="booking">
-                <p class="booking__heading">Выбрать дату фотосессии</p>
-                <p class="booking__description"></p>
-
-                <form class="booking__form" name="booking__form" id="id-booking__form">
-                    <input type="text" class="booking__form--input" id="id-booking__name" placeholder="Ваше имя" required>
-                    <input type="text" class="booking__form--input" id="id-booking__tel" placeholder="Ваш телефон" required pattern="[0-9]*" maxlength=15>
-                    <input type="text" class="booking__form--input" id="id-booking__date" placeholder="Желаемая дата" required>
-
-                    <input id="id-control-field">
-                    
-                    <button class="btn booking__form--btn" id="id-booking__form--btn" form="booking__form">Бронировать</button>
-                    <!-- блок для вывода сообщения об успешной отправке -->
-                    <div class="booking__form--result" id="id-booking__form--result"></div>
-                </form>
-
-                <p class="booking__consent">Нажимая кнопку «Бронировать», Вы даете свое согласие на обработку персональных данных в соответствии с <a href="/resources/politica-konfidecialnosti-katerinapetrova.ru.pdf" class="booking__consent--link" target="_blank">политикой конфиденциальности</a>.</p>
+            <div class="portfolio__image-box">
+                <img src="img/portfolio/gallery-2/gallery-2-preview.jpg" alt="Beautiful photo"
+                    class="portfolio__image-box--image">
+                <a href="/portfolio/gallery-2.html" class="portfolio__image-box--link">
+                    <span class="portfolio__image-box--link-text">Ольга, портретная съемка</span>
+                </a>
             </div>
 
-            <h1 class="section-about__heading-1 heading-1">Обо мне</h1>
-            
-            <div class="section-about__content">
-                
-                <div class="section-about__content--text-box">
-                    <div class="section-about__content--text">
-                        Меня зовут Катерина, я занимаюсь портретной, семейной и lovestory фотографией в Санкт-Петербурге.
-Увлекаюсь фотографией более 7 лет, работаю профессионально уже более 4-х лет.
-Постоянно обучаюсь и наращиваю техническую базу.
-Для свадебной фотосессии всегда на готове два комплекта оборудования, работаю без форс-мажоров!
-Помогу спланировать место съемки, выбрать студию и визажиста (при необходимости).
-Съемка будет в легкой и непринужденной обставноке, обязательно будет много смеха и веселья!
-Если вы ботитесь камеры и не любите свои фото, со мной вы будете их разглядывать и восхищаться еще много лет!
-                    </div>
-                    <div class="section-about__content--name">Фотограф Катерина Петрова</div>
-                    <div class="section-about__content--wish">Фотографирую счастье!</div>
-                </div>
-
-                <img src="img/image-about-me.jpg" alt="Beautiful photo" class="section-about__content--img">
+            <div class="portfolio__image-box">
+                <img src="img/portfolio/gallery-3/gallery-3-preview.jpg" alt="Beautiful photo"
+                    class="portfolio__image-box--image">
+                <a href="/portfolio/gallery-3.html" class="portfolio__image-box--link">
+                    <span class="portfolio__image-box--link-text">Юлия и дог Макс</span>
+                </a>
             </div>
 
-        </section>
-
-
-        <section class="section-portfolio" id="id-section-portfolio">
-
-            <div class="portfolio">
-
-                <div class="portfolio__image-box">
-                    <img src="img/portfolio/gallery-1/gallery-1-preview.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
-                    <a href="/portfolio/gallery-1.html" class="portfolio__image-box--link">
-                        <span class="portfolio__image-box--link-text">Love Story Дарья и Алексей</span>
-                    </a>
-                </div>
-
-                <div class="portfolio__image-box">
-                    <img src="img/portfolio/gallery-2/gallery-2-preview.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
-                    <a href="/portfolio/gallery-2.html" class="portfolio__image-box--link">
-                        <span class="portfolio__image-box--link-text">Ольга, портретная съемка</span>
-                    </a>
-                </div>
-
-                <div class="portfolio__image-box">
-                    <img src="img/portfolio/gallery-3/gallery-3-preview.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
-                    <a href="/portfolio/gallery-3.html" class="portfolio__image-box--link">
-                        <span class="portfolio__image-box--link-text">Юлия и дог Макс</span>
-                    </a>
-                </div>
-
-                <div class="portfolio__image-box">
-                    <img src="img/portfolio/gallery-4/gallery-4-preview.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
-                    <a href="/portfolio/gallery-4.html" class="portfolio__image-box--link">
-                        <span class="portfolio__image-box--link-text">Азиз, портретная съемка</span>
-                    </a>
-                </div>
-
-                <div class="portfolio__image-box">
-                    <img src="img/portfolio/gallery-5/gallery-5-preview.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
-                    <a href="/portfolio/gallery-5.html" class="portfolio__image-box--link">
-                        <span class="portfolio__image-box--link-text">Love Story Ирина и Дмитрий</span>
-                    </a>
-                </div>
-
-                <div class="portfolio__image-box">
-                    <img src="img/portfolio/gallery-6/gallery-6-preview.jpg" alt="Beautiful photo" class="portfolio__image-box--image">
-                    <a href="/portfolio/gallery-6.html" class="portfolio__image-box--link">
-                        <span class="portfolio__image-box--link-text">Анастасия и Эфа</span>
-                    </a>
-                </div>
-
+            <div class="portfolio__image-box">
+                <img src="img/portfolio/gallery-4/gallery-4-preview.jpg" alt="Beautiful photo"
+                    class="portfolio__image-box--image">
+                <a href="/portfolio/gallery-4.html" class="portfolio__image-box--link">
+                    <span class="portfolio__image-box--link-text">Азиз, портретная съемка</span>
+                </a>
             </div>
 
-        </section>
-
-        
-        <section class="section-price" id="id-section-price">
-            
-            <h1 class="section-price__heading-1 heading-1">Стоимость</h1>
-
-            <div class="section-price__cards">
-
-                <div class="card">
-                    <div class="card__title">Индивидуальная фотосъемка</div>
-                    
-
-                    <div class="card__description">
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Первая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Вторая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Третья очень длинная строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Короткая четвертая</p>
-                    </div>
-
-                    <div class="card__price">10 000 ₽</div>
-
-                    <button class="btn card__btn"><a href="#id-booking-footer" class="card__link">Выбрать</a></button>
-                </div>
-
-                <div class="card">
-                    <div class="card__title">Семейная фотосъемка</div>
-                    
-
-                    <div class="card__description">
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Первая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Вторая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Третья очень длинная строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Короткая четвертая</p>
-                    </div>
-
-                    <div class="card__price">14 000 ₽</div>
-
-                    <button class="btn card__btn"><a href="#id-booking-footer" class="card__link">Выбрать</a></button>
-                </div>
-
-                <div class="card">
-                    <div class="card__title">Love story</div>
-                    
-
-                    <div class="card__description">
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Первая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Вторая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Третья очень длинная строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Короткая четвертая</p>
-                    </div>
-
-                    <div class="card__price">15 000 ₽</div>
-
-                    <button class="btn card__btn"><a href="#id-booking-footer" class="card__link">Выбрать</a></button>
-                </div>
-
-                <div class="card">
-                    <div class="card__title">Свадебная фотосъемка</div>
-                    
-
-                    <div class="card__description">
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Первая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Вторая строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Третья очень длинная строка описания</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Короткая четвертая</p>
-                        <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Шестая строка средней длинны</p>
-                    </div>
-
-                    <div class="card__price">40 000 ₽</div>
-
-                    <button class="btn card__btn"><a href="#id-booking-footer" class="card__link">Выбрать</a></button>
-                </div>
-
+            <div class="portfolio__image-box">
+                <img src="img/portfolio/gallery-5/gallery-5-preview.jpg" alt="Beautiful photo"
+                    class="portfolio__image-box--image">
+                <a href="/portfolio/gallery-5.html" class="portfolio__image-box--link">
+                    <span class="portfolio__image-box--link-text">Love Story Ирина и Дмитрий</span>
+                </a>
             </div>
 
-        </section>
-
-        
-
-        <footer class="section-footer" id="footer">
-
-            <div class="booking" id="id-booking--footer">
-                <p class="booking__heading">Выбрать дату фотосессии</p>
-                <p class="booking__description"></p>
-
-                <form class="booking__form" name="booking__form" id="id-booking__form--footer">
-                    <input type="text" class="booking__form--input" id="id-booking__name--footer" placeholder="Ваше имя" required>
-                    <input type="text" class="booking__form--input" id="id-booking__tel--footer" placeholder="Ваш телефон" required pattern="[0-9]*" maxlength=15>
-                    <input type="text" class="booking__form--input" id="id-booking__date--footer" placeholder="Желаемая дата" required>
-
-                    <input id="id-control-field">
-                    
-                    <button class="btn booking__form--btn" id="id-booking__form--btn--footer" form="booking__form">Бронировать</button>
-                    <!-- блок для вывода сообщения об успешной отправке -->
-                    <div class="booking__form--result" id="id-booking__form--result--footer"></div>
-                </form>
-
-                <p class="booking__consent">Нажимая кнопку «Бронировать», Вы даете свое согласие на обработку персональных данных в соответствии с <a href="/resources/politica-konfidecialnosti-katerinapetrova.ru.pdf" class="booking__consent--link" target="_blank">политикой конфиденциальности</a>.</p>
+            <div class="portfolio__image-box">
+                <img src="img/portfolio/gallery-6/gallery-6-preview.jpg" alt="Beautiful photo"
+                    class="portfolio__image-box--image">
+                <a href="/portfolio/gallery-6.html" class="portfolio__image-box--link">
+                    <span class="portfolio__image-box--link-text">Анастасия и Эфа</span>
+                </a>
             </div>
 
-            <address class="contacts-block">
+        </div>
 
-                <div class="contacts-block__text">
-                    <p>Чувствуете покалывание на кончиках пальцев?</p>
-                    <p>Это Ваше непреодолимое желание связаться со мной</p>
+    </section>
+
+
+    <section class="section-price" id="id-section-price">
+
+        <h1 class="section-price__heading-1 heading-1">Стоимость</h1>
+
+        <div class="section-price__cards">
+
+            <div class="card">
+                <div class="card__title">Индивидуальная фотосъемка</div>
+
+
+                <div class="card__description">
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Первая
+                        строка описания</p>
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Вторая
+                        строка описания</p>
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Третья
+                        очень длинная строка описания</p>
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Короткая
+                        четвертая</p>
                 </div>
 
-                <div class="contacts-block__contacts">
-                    <p><span> Фотограф </span><span>Катерина Петрова</span></p>
-                    <a href="tel:+79030932933">+7 903 093 29 33</a>
-                    <a href="mailto:info@katerinapetrova.ru">info@katerinapetrova.ru</a>
+                <div class="card__price">10 000 ₽</div>
+
+                <button class="btn card__btn"><a href="#id-booking-footer" class="card__link">Выбрать</a></button>
+            </div>
+
+            <div class="card">
+                <div class="card__title">Семейная фотосъемка</div>
+
+
+                <div class="card__description">
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Первая
+                        строка описания</p>
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Вторая
+                        строка описания</p>
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Третья
+                        очень длинная строка описания</p>
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Короткая
+                        четвертая</p>
                 </div>
-                    
 
-            </address>
+                <div class="card__price">14 000 ₽</div>
 
-        </footer>
+                <button class="btn card__btn"><a href="#id-booking-footer" class="card__link">Выбрать</a></button>
+            </div>
+
+            <div class="card">
+                <div class="card__title">Love story</div>
+
+
+                <div class="card__description">
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Первая
+                        строка описания</p>
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Вторая
+                        строка описания</p>
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Третья
+                        очень длинная строка описания</p>
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Короткая
+                        четвертая</p>
+                </div>
+
+                <div class="card__price">15 000 ₽</div>
+
+                <button class="btn card__btn"><a href="#id-booking-footer" class="card__link">Выбрать</a></button>
+            </div>
+
+            <div class="card">
+                <div class="card__title">Свадебная фотосъемка</div>
+
+
+                <div class="card__description">
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Первая
+                        строка описания</p>
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Вторая
+                        строка описания</p>
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Третья
+                        очень длинная строка описания</p>
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Короткая
+                        четвертая</p>
+                    <p class="card__description--feature"><i class="card__description--icon fas fa-check"></i>Шестая
+                        строка средней длинны</p>
+                </div>
+
+                <div class="card__price">40 000 ₽</div>
+
+                <button class="btn card__btn"><a href="#id-booking-footer" class="card__link">Выбрать</a></button>
+            </div>
+
+        </div>
+
+    </section>
 
 
 
-        <section class="section-gallery">
-            <div class="gallery gallery-container">
-                <img srcset="img/footer-gallery/1500/photo-0-1500.jpg 1500w,
+    <footer class="section-footer" id="footer">
+
+        <div class="booking" id="id-booking-footer">
+            <p class="booking__heading">Выбрать дату фотосессии</p>
+            <p class="booking__description"></p>
+
+            <form class="booking__form" name="booking__form" id="id-booking__form--footer">
+                <input type="text" class="booking__form--input" id="id-booking__name--footer" placeholder="Ваше имя"
+                    required>
+                <input type="text" class="booking__form--input" id="id-booking__tel--footer" placeholder="Ваш телефон"
+                    required pattern="[0-9]*" maxlength=15>
+                <input type="text" class="booking__form--input" id="id-booking__date--footer"
+                    placeholder="Желаемая дата" required>
+
+                <input id="id-control-field">
+
+                <button class="btn booking__form--btn" id="id-booking__form--btn--footer"
+                    form="booking__form">Бронировать</button>
+                <!-- блок для вывода сообщения об успешной отправке -->
+                <div class="booking__form--result" id="id-booking__form--result--footer"></div>
+            </form>
+
+            <p class="booking__consent">Нажимая кнопку «Бронировать», Вы даете свое согласие на обработку персональных
+                данных в соответствии с <a href="/resources/politica-konfidecialnosti-katerinapetrova.ru.pdf"
+                    class="booking__consent--link" target="_blank">политикой конфиденциальности</a>.</p>
+        </div>
+
+        <address class="contacts-block">
+
+            <div class="contacts-block__text">
+                <p>Чувствуете покалывание на кончиках пальцев?</p>
+                <p>Это Ваше непреодолимое желание связаться со мной</p>
+            </div>
+
+            <div class="contacts-block__contacts">
+                <p><span> Фотограф </span><span>Катерина Петрова</span></p>
+                <a href="tel:+79030932933">+7 903 093 29 33</a>
+                <a href="mailto:info@katerinapetrova.ru">info@katerinapetrova.ru</a>
+            </div>
+
+
+        </address>
+
+    </footer>
+
+
+
+    <section class="section-gallery">
+        <div class="gallery gallery-container">
+            <img srcset="img/footer-gallery/1500/photo-0-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-0-1000.jpg 1000w,
                              img/footer-gallery/500/photo-0-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-0"
-                    src="img/footer-gallery/1500/photo-0-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-1-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-0" src="img/footer-gallery/1500/photo-0-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-1-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-1-1000.jpg 1000w,
                              img/footer-gallery/500/photo-1-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-1"
-                    src="img/footer-gallery/1500/photo-1-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-2-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-1" src="img/footer-gallery/1500/photo-1-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-2-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-2-1000.jpg 1000w,
                              img/footer-gallery/500/photo-2-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-2"
-                    src="img/footer-gallery/1500/photo-2-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-3-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-2" src="img/footer-gallery/1500/photo-2-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-3-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-3-1000.jpg 1000w,
                              img/footer-gallery/500/photo-3-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-3"
-                    src="img/footer-gallery/1500/photo-3-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-4-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-3" src="img/footer-gallery/1500/photo-3-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-4-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-4-1000.jpg 1000w,
                              img/footer-gallery/500/photo-4-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-4"
-                    src="img/footer-gallery/1500/photo-4-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-5-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-4" src="img/footer-gallery/1500/photo-4-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-5-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-5-1000.jpg 1000w,
                              img/footer-gallery/500/photo-5-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-5"
-                    src="img/footer-gallery/1500/photo-5-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-6-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-5" src="img/footer-gallery/1500/photo-5-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-6-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-6-1000.jpg 1000w,
                              img/footer-gallery/500/photo-6-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-6"
-                    src="img/footer-gallery/1500/photo-6-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-7-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-6" src="img/footer-gallery/1500/photo-6-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-7-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-7-1000.jpg 1000w,
                              img/footer-gallery/500/photo-7-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-7"
-                    src="img/footer-gallery/1500/photo-7-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-8-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-7" src="img/footer-gallery/1500/photo-7-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-8-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-8-1000.jpg 1000w,
                              img/footer-gallery/500/photo-8-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-8"
-                    src="img/footer-gallery/1500/photo-8-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-9-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-8" src="img/footer-gallery/1500/photo-8-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-9-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-9-1000.jpg 1000w,
                              img/footer-gallery/500/photo-9-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-9"
-                    src="img/footer-gallery/1500/photo-9-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-10-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-9" src="img/footer-gallery/1500/photo-9-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-10-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-10-1000.jpg 1000w,
                              img/footer-gallery/500/photo-10-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-10"
-                    src="img/footer-gallery/1500/photo-10-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-11-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-10" src="img/footer-gallery/1500/photo-10-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-11-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-11-1000.jpg 1000w,
                              img/footer-gallery/500/photo-11-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-11"
-                    src="img/footer-gallery/1500/photo-11-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-12-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-11" src="img/footer-gallery/1500/photo-11-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-12-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-12-1000.jpg 1000w,
                              img/footer-gallery/500/photo-12-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-12"
-                    src="img/footer-gallery/1500/photo-12-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-13-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-12" src="img/footer-gallery/1500/photo-12-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-13-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-13-1000.jpg 1000w,
                              img/footer-gallery/500/photo-13-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-13"
-                    src="img/footer-gallery/1500/photo-13-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-14-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-13" src="img/footer-gallery/1500/photo-13-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-14-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-14-1000.jpg 1000w,
                              img/footer-gallery/500/photo-14-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-14"
-                    src="img/footer-gallery/1500/photo-14-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-15-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-14" src="img/footer-gallery/1500/photo-14-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-15-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-15-1000.jpg 1000w,
                              img/footer-gallery/500/photo-15-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-15"
-                    src="img/footer-gallery/1500/photo-15-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-16-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-15" src="img/footer-gallery/1500/photo-15-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-16-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-16-1000.jpg 1000w,
                              img/footer-gallery/500/photo-16-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-16"
-                    src="img/footer-gallery/1500/photo-16-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-17-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-16" src="img/footer-gallery/1500/photo-16-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-17-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-17-1000.jpg 1000w,
                              img/footer-gallery/500/photo-17-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-17"
-                    src="img/footer-gallery/1500/photo-17-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-18-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-17" src="img/footer-gallery/1500/photo-17-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-18-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-18-1000.jpg 1000w,
                              img/footer-gallery/500/photo-18-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-18"
-                    src="img/footer-gallery/1500/photo-18-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-19-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-18" src="img/footer-gallery/1500/photo-18-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-19-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-19-1000.jpg 1000w,
                              img/footer-gallery/500/photo-19-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-19"
-                    src="img/footer-gallery/1500/photo-19-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-20-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-19" src="img/footer-gallery/1500/photo-19-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-20-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-20-1000.jpg 1000w,
                              img/footer-gallery/500/photo-20-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-20"
-                    src="img/footer-gallery/1500/photo-20-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-21-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-20" src="img/footer-gallery/1500/photo-20-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-21-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-21-1000.jpg 1000w,
                              img/footer-gallery/500/photo-21-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-21"
-                    src="img/footer-gallery/1500/photo-21-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-22-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-21" src="img/footer-gallery/1500/photo-21-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-22-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-22-1000.jpg 1000w,
                              img/footer-gallery/500/photo-22-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-22"
-                    src="img/footer-gallery/1500/photo-22-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-23-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-22" src="img/footer-gallery/1500/photo-22-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-23-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-23-1000.jpg 1000w,
                              img/footer-gallery/500/photo-23-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-23"
-                    src="img/footer-gallery/1500/photo-23-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-24-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-23" src="img/footer-gallery/1500/photo-23-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-24-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-24-1000.jpg 1000w,
                              img/footer-gallery/500/photo-24-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-24"
-                    src="img/footer-gallery/1500/photo-24-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-25-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-24" src="img/footer-gallery/1500/photo-24-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-25-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-25-1000.jpg 1000w,
                              img/footer-gallery/500/photo-25-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-25"
-                    src="img/footer-gallery/1500/photo-25-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-26-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-25" src="img/footer-gallery/1500/photo-25-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-26-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-26-1000.jpg 1000w,
                              img/footer-gallery/500/photo-26-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-26"
-                    src="img/footer-gallery/1500/photo-26-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-27-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-26" src="img/footer-gallery/1500/photo-26-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-27-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-27-1000.jpg 1000w,
                              img/footer-gallery/500/photo-27-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-27"
-                    src="img/footer-gallery/1500/photo-27-1500.jpg">
-                <img srcset="img/footer-gallery/1500/photo-28-1500.jpg 1500w,
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-27" src="img/footer-gallery/1500/photo-27-1500.jpg">
+            <img srcset="img/footer-gallery/1500/photo-28-1500.jpg 1500w,
                              img/footer-gallery/1000/photo-28-1000.jpg 1000w,
                              img/footer-gallery/500/photo-28-500.jpg 500w"
-                    sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" 
-                    alt="Beautiful photo" class="gallery__image" id="galleryImageID-28"
-                    src="img/footer-gallery/1500/photo-28-1500.jpg">
-            </div>
+                sizes="(max-width: 50em) 100vw, (max-width: 200em) 60vw" alt="Beautiful photo" class="gallery__image"
+                id="galleryImageID-28" src="img/footer-gallery/1500/photo-28-1500.jpg">
+        </div>
 
-            <div class="gallery-view-box" id="galleryViewBoxID">
-                <i class="fas fa-times gallery-view-box__close-btn" id="ID-close-btn"></i>
-                <i class="fas fa-chevron-left gallery-view-box__arrow--left" id="ID-arrow-left"></i>
-                <i class="fas fa-chevron-right gallery-view-box__arrow--right" id="ID-arrow-right"></i>
-            </div>
+        <div class="gallery-view-box" id="galleryViewBoxID">
+            <i class="fas fa-times gallery-view-box__close-btn" id="ID-close-btn"></i>
+            <i class="fas fa-chevron-left gallery-view-box__arrow--left" id="ID-arrow-left"></i>
+            <i class="fas fa-chevron-right gallery-view-box__arrow--right" id="ID-arrow-right"></i>
+        </div>
 
-        </section>
+    </section>
 
-        <section class="section-testimonials" id="id-section-testimonials">
-           <div class="testimonials">
-
-               <div class="testimonials__testimonial">
-                   <img src="img/testimonials/user-photos/avatar-1.jpg" alt="User photo" class="testimonials__testimonial--user-photo">
-                   <div class="testimonials__testimonial--content">
-                       <p class="testimonials__testimonial--header">Love Story</p>
-                        <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic, doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
-                        <p class="testimonials__testimonial--name">Светлана К.</p>
-                   </div>
-               </div>
-
-               <div class="testimonials__testimonial">
-                <img src="img/testimonials/user-photos/avatar-2.jpg" alt="User photo" class="testimonials__testimonial--user-photo">
-                <div class="testimonials__testimonial--content">
-                    <p class="testimonials__testimonial--header">Индивидуальная фотосъемка</p>
-                     <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic, doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
-                     <p class="testimonials__testimonial--name">Ирина В.</p>
-                </div>
-            </div>
+    <section class="section-testimonials" id="id-section-testimonials">
+        <div class="testimonials">
 
             <div class="testimonials__testimonial">
-                <img src="img/testimonials/user-photos/avatar-3.jpg" alt="User photo" class="testimonials__testimonial--user-photo">
-                <div class="testimonials__testimonial--content">
-                    <p class="testimonials__testimonial--header">Индивидуальная фотосъемка</p>
-                     <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic, doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
-                     <p class="testimonials__testimonial--name">Игорь Р.</p>
-                </div>
-            </div>
-
-            <div class="testimonials__testimonial">
-                <img src="img/testimonials/user-photos/avatar-4.jpg" alt="User photo" class="testimonials__testimonial--user-photo">
-                <div class="testimonials__testimonial--content">
-                    <p class="testimonials__testimonial--header">Свадебная фотосъемка</p>
-                     <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic, doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
-                     <p class="testimonials__testimonial--name">Анастасия Е.</p>
-                </div>
-            </div>
-
-            <div class="testimonials__testimonial">
-                <img src="img/testimonials/user-photos/avatar-5.jpg" alt="User photo" class="testimonials__testimonial--user-photo">
+                <img src="img/testimonials/user-photos/avatar-1.jpg" alt="User photo"
+                    class="testimonials__testimonial--user-photo">
                 <div class="testimonials__testimonial--content">
                     <p class="testimonials__testimonial--header">Love Story</p>
-                     <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic, doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
-                     <p class="testimonials__testimonial--name">Марина К.</p>
+                    <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic,
+                        doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
+                    <p class="testimonials__testimonial--name">Светлана К.</p>
                 </div>
             </div>
 
             <div class="testimonials__testimonial">
-                <img src="img/testimonials/user-photos/avatar-6.jpg" alt="User photo" class="testimonials__testimonial--user-photo">
+                <img src="img/testimonials/user-photos/avatar-2.jpg" alt="User photo"
+                    class="testimonials__testimonial--user-photo">
                 <div class="testimonials__testimonial--content">
-                    <p class="testimonials__testimonial--header">Свадебная фотосъемка</p>
-                     <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic, doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
-                     <p class="testimonials__testimonial--name">Елена Т.</p>
+                    <p class="testimonials__testimonial--header">Индивидуальная фотосъемка</p>
+                    <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic,
+                        doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
+                    <p class="testimonials__testimonial--name">Ирина В.</p>
                 </div>
             </div>
-           </div>
-        
-        </section>
-            
-    
-        <script src="javascript/script.js"></script>
-        <script src="javascript/gallery-viewer.js"></script>
-        <script src="javascript/lazy-scroll.js"></script>
-        <script src="javascript/sendmail.js"></script>
-    </body>
+
+            <div class="testimonials__testimonial">
+                <img src="img/testimonials/user-photos/avatar-3.jpg" alt="User photo"
+                    class="testimonials__testimonial--user-photo">
+                <div class="testimonials__testimonial--content">
+                    <p class="testimonials__testimonial--header">Индивидуальная фотосъемка</p>
+                    <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic,
+                        doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
+                    <p class="testimonials__testimonial--name">Игорь Р.</p>
+                </div>
+            </div>
+
+            <div class="testimonials__testimonial">
+                <img src="img/testimonials/user-photos/avatar-4.jpg" alt="User photo"
+                    class="testimonials__testimonial--user-photo">
+                <div class="testimonials__testimonial--content">
+                    <p class="testimonials__testimonial--header">Свадебная фотосъемка</p>
+                    <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic,
+                        doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
+                    <p class="testimonials__testimonial--name">Анастасия Е.</p>
+                </div>
+            </div>
+
+            <div class="testimonials__testimonial">
+                <img src="img/testimonials/user-photos/avatar-5.jpg" alt="User photo"
+                    class="testimonials__testimonial--user-photo">
+                <div class="testimonials__testimonial--content">
+                    <p class="testimonials__testimonial--header">Love Story</p>
+                    <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic,
+                        doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
+                    <p class="testimonials__testimonial--name">Марина К.</p>
+                </div>
+            </div>
+
+            <div class="testimonials__testimonial">
+                <img src="img/testimonials/user-photos/avatar-6.jpg" alt="User photo"
+                    class="testimonials__testimonial--user-photo">
+                <div class="testimonials__testimonial--content">
+                    <p class="testimonials__testimonial--header">Свадебная фотосъемка</p>
+                    <p class="testimonials__testimonial--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fugiat est, ducimus dolore saepe vero ipsa minus quam, voluptates quos assumenda omnis hic,
+                        doloribus aspernatur sed quas nobis! Perspiciatis, ipsa non.</p>
+                    <p class="testimonials__testimonial--name">Елена Т.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="javascript/script.js"></script>
+    <script src="javascript/gallery-viewer.js"></script>
+    <script src="javascript/lazy-scroll.js"></script>
+    <script src="javascript/sendmail.js"></script>
+</body>
 
 </html>
