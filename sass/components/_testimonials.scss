@@ -28,6 +28,12 @@
            align-items: center;
         }
 
+        &--img-link,
+        &--img-link:active,
+        &--img-link:visited {
+            text-decoration: none;
+        }
+
 
         &--user-photo {
             flex-shrink : 0;
@@ -43,14 +49,20 @@
             flex-shrink: 1;
         }
 
-        &--header {
-            font-weight: 500;
-            margin-bottom: 1rem;
+        &--header,
+        &--header:active,
+        &--header:visited {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 1rem !important;
             font-size: 1.6rem;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         &--text {
             margin-bottom: 1rem;
+            //font-weight: 500;
         }
 
         &--name {
